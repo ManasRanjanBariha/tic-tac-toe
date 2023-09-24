@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './App.css'
 
 
 function Square({ value, onSquareClick }) {
@@ -54,8 +55,8 @@ export default function Board() {
     }
 
   return (
-    <>
-      <div>{status}</div>
+    <div className='board' >
+      <div className="status">{status}</div>
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
@@ -71,6 +72,6 @@ export default function Board() {
         <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
-    </>
+    </div>
   );
 }
